@@ -1,0 +1,155 @@
+/* ==========================================
+   1. RESET GENERAL OPTIMIZADO PARA MÓVILES
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; 
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  width: 100vw;
+  height: 100dvh; 
+  background-color: #e2daf0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================
+   2. PANTALLA 1: PUERTA DE ENTRADA (GATEKEEPER)
+   ========================================== */
+.gatekeeper-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background-color: #e2daf0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.gatekeeper-box {
+  text-align: center;
+  background: #ffffff;
+  padding: 35px 20px;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(92, 75, 117, 0.15);
+  width: 100%;
+  max-width: 340px;
+}
+
+.gatekeeper-box h2 {
+  color: #5c4b75;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.play-btn {
+  background-color: #7b689a;
+  color: #ffffff;
+  border: none;
+  padding: 16px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(123, 104, 154, 0.3);
+  transition: transform 0.1s ease;
+}
+
+.play-btn:active {
+  transform: scale(0.98); 
+}
+
+/* ==========================================
+   3. PANTALLA 2: VIDEO DE FONDO Y TEXTOS
+   ========================================== */
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px 40px 20px; 
+  z-index: 1000;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.main-title {
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.3;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  background: rgba(123, 104, 154, 0.55); 
+  padding: 14px 18px;
+  border-radius: 16px;
+  max-width: 95%;
+}
+
+.bottom-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.custom-instruction {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.35); 
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+.action-btn {
+  background-color: #1e7e85; 
+  color: #ffffff;
+  border: none;
+  padding: 15px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 28px;
+  cursor: pointer;
+  width: 85%;
+  max-width: 280px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease;
+}
+
+.action-btn:active {
+  transform: scale(0.96);
+}

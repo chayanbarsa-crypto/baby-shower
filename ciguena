@@ -1,0 +1,17 @@
+function startExperience() {
+    // 1. Ocultamos la pantalla del botón
+    document.getElementById('gatekeeper').classList.add('hidden');
+    
+    // 2. Mostramos la pantalla del vídeo
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    welcomeScreen.classList.remove('hidden');
+    
+    // 3. Buscamos el vídeo, le damos play y el navegador permitirá el sonido
+    const video = document.getElementById('bgVideo');
+    video.play();
+}
+
+function openInvitation() {
+    // Te redirige a la invitación final
+    window.location.href = "invitacion.html";
+}
