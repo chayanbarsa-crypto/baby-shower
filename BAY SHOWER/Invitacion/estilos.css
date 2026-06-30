@@ -1,0 +1,150 @@
+/* Reset para evitar comportamientos extraños en móviles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; /* Elimina el cuadro azul al tocar botones en móviles */
+}
+
+body {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  width: 100vw;
+  height: 100dvh; /* Altura dinámica para móviles */
+}
+
+/* Pantalla del botón inicial */
+.gatekeeper-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background-color: #e2daf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.gatekeeper-box {
+  text-align: center;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 350px;
+}
+
+.gatekeeper-box h2 {
+  color: #5c4b75;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+}
+
+.play-btn {
+  background-color: #7b689a;
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(123, 104, 154, 0.4);
+}
+
+/* Pantalla del video */
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px; /* Reducido para pantallas de móviles pequeños */
+  z-index: 1000;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.main-title {
+  position: relative;
+  z-index: 10;
+  color: #ffffff;
+  font-size: 1.6rem; /* Tamaño adaptado para móviles */
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  background: rgba(123, 104, 154, 0.5); 
+  padding: 12px 15px;
+  border-radius: 15px;
+  max-width: 95%;
+}
+
+.bottom-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.custom-instruction {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4); 
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.action-btn {
+  background-color: #1e7e85; 
+  color: white;
+  border: none;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 85%;
+  max-width: 280px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.welcome-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.invitation-content {
+  width: 100vw;
+  height: 100dvh;
+  background-color: #f7f3ff;
+  padding: 20px;
+}

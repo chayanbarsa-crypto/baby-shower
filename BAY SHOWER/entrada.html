@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Baby Shower</title>
+  <!-- Enlace exacto a tu archivo edicion.css -->
+  <link rel="stylesheet" href="edicion.css">
+</head>
+<body>
+
+  <!-- PANTALLA 1: Botón de entrada para activar el sonido -->
+  <div id="gatekeeper" class="gatekeeper-screen">
+    <div class="gatekeeper-box">
+      <h2>¡Te ha llegado una sorpresa!</h2>
+      <button class="play-btn" ontouchstart="startExperience()" onclick="startExperience()">Toca para abrir ✉️</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA 2: Reproducción del video de la cigüeña -->
+  <div id="welcomeScreen" class="welcome-screen hidden">
+    <video loop muted playsinline id="bgVideo" class="bg-video">
+      <source src="ciguena.mp4" type="video/mp4">
+    </video>
+
+    <h1 class="main-title">¡Una entrega especial para el Baby Shower!</h1>
+
+    <div class="bottom-content">
+      <p class="custom-instruction">Presiona aquí para ver la invitación</p>
+      <button class="action-btn" ontouchstart="openInvitation()" onclick="openInvitation()">Ver invitación</button>
+    </div>
+  </div>
+
+  <!-- Enlace exacto a tu archivo de script ciguena -->
+  <script src="ciguena"></script>
+</body>
+</html>

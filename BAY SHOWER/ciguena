@@ -1,0 +1,29 @@
+const gatekeeper = document.getElementById("gatekeeper");
+const welcomeScreen = document.getElementById("welcomeScreen");
+const video = document.getElementById("bgVideo");
+
+let isStarted = false;
+let isOpened = false;
+
+function startExperience() {
+  if (isStarted) return; 
+  isStarted = true;
+
+  gatekeeper.classList.add("hidden");
+  welcomeScreen.classList.remove("hidden");
+  
+  video.muted = false;
+  video.volume = 0.8;
+  
+  video.play().catch(error => {
+    console.log("Error al reproducir el video:", error);
+  });
+}
+
+function openInvitation() {
+  if (isOpened) return;
+  isOpened = true;
+
+  // Redirección adaptada: entra a la carpeta Invitacion y abre index.html
+  window.location.href = "Invitacion/index.html";
+}
